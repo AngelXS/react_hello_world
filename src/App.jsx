@@ -29,7 +29,7 @@ class App extends React.Component {
 }
 export default App;*/
 
-import logo from './logo.svg';
+
 import './App.css';
 import React from 'react';
 import PersonCard from './Components/PersonCard';
@@ -44,7 +44,7 @@ class App extends React.Component {
     ];
     return(
       <div className='App'>
-        <menu></menu>
+        <Menu></Menu>
         {data.map((person,index)=>(
           <PersonCard key={index} name={person.name} city={person.city} country={person.country} edad={person.edad} address={person.address} foto={person.foto} >
             <button onClick={()=> alert(`Contactando a ${person.name}`)}>{`Contactar a ${person.name}`}</button>

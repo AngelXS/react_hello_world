@@ -39,3 +39,8 @@
 img {
   width: 10%;
 }
+.menu{
+  display: flex;
+  flex-direction: row;
+  background-color: blue;
+}
