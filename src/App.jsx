@@ -33,6 +33,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import PersonCard from './Components/PersonCard';
+import Menu from './Components/Menu';
 
 class App extends React.Component {
   render(){
@@ -43,14 +44,14 @@ class App extends React.Component {
     ];
     return(
       <div className='App'>
+        <menu></menu>
         {data.map((person,index)=>(
           <PersonCard key={index} name={person.name} city={person.city} country={person.country} edad={person.edad} address={person.address} foto={person.foto} >
             <button onClick={()=> alert(`Contactando a ${person.name}`)}>{`Contactar a ${person.name}`}</button>
           </PersonCard>
-        ))}
+        ))}  
       </div>
     )
-
     /*
     function edades(index) {
       data[index].edad = data[index].edad+1;
