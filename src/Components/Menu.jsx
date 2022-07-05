@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Reac, { Component } from 'react';
 
 class Menu extends React.Component{
@@ -15,4 +15,4 @@ class Menu extends React.Component{
     }
  }
 
- export default Menu; 
+ export default Menu; */

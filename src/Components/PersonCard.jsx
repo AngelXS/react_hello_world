@@ -30,8 +30,8 @@ class PersonCard extends React.Component{
  export default PersonCard; */
 
  import React from "react";
- import Reac, { Component } from 'react';
- 
+
+
  class PersonCard extends React.Component{
     constructor(props) {
         super(props);
@@ -40,18 +40,18 @@ class PersonCard extends React.Component{
     }
     changeAge(){
         this.setState(prevState=>({edad:prevState.edad+1}));
-        {console.log(this.props.name+" "+this.props.edad)}
+        
     }
      render(){
-        const { name, city, country, edad, address, foto } = this.props;
+        const { name, city, country, address, foto } = this.props;
          return (
-             <div style={{backgroundColor:'yellow'}} className="container">
+             <div style={{backgroundColor:'skyblue'}} className="container">
                  <img src={foto} alt="foto" />
                  <h1>{name}</h1>
+                 <h3 id="edades">{this.state.edad}</h3>   
                  <h3>{city}</h3>
                  <h3>{country}</h3>
                  <h3>{address}</h3>
-                 <h3 id="edades">{this.state.edad}</h3>    
                  <button onClick={this.changeAge}>Aumentar</button>           
                  {this.props.children}
                  <hr/>
