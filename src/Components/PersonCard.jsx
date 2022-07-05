@@ -40,7 +40,6 @@ class PersonCard extends React.Component{
     }
     changeAge(){
         this.setState(prevState=>({edad:prevState.edad+1}));
-        
     }
      render(){
         const { name, city, country, address, foto } = this.props;
@@ -52,7 +51,7 @@ class PersonCard extends React.Component{
                  <h3>{city}</h3>
                  <h3>{country}</h3>
                  <h3>{address}</h3>
-                 <button onClick={this.changeAge}>Aumentar</button>           
+                 <button onClick={this.changeAge}>Aumentar</button>       
                  {this.props.children}
                  <hr/>
              </div>

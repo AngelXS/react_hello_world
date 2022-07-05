@@ -33,8 +33,17 @@ export default App;*/
 import './App.css';
 import React from 'react';
 import PersonCard from './Components/PersonCard';
+import Menu from './Components/Menu';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {nombre: "", logo: ""};
+    this.changestate = this.changestate.bind(this);
+  }
+  changestate() {
+    this.setState();
+  }
   render(){
     const data=[
       {name: 'Angel', city: 'Cuenca', country: 'Ecuador',edad: 13, address: 'Gargía Moreno y Vnz', foto:'https://th.bing.com/th/id/R.88eb21cb4e3694341e75bbac7a265ffb?rik=GoCReAF3TNW6yQ&riu=http%3a%2f%2fwww.misimagenesde.com%2fwp-content%2fuploads%2f2011%2f01%2fimagenes-de-personas.jpg&ehk=n6NLhejqcpA8k7ZO9wqa7PSmXl2m9Pg7Q46wXW50UaU%3d&risl=&pid=ImgRaw&r=0'},
@@ -45,7 +54,6 @@ class App extends React.Component {
       <div className='App'>
         {data.map((person,index)=>(
           <PersonCard key={index} name={person.name} city={person.city} country={person.country} edad={person.edad} address={person.address} foto={person.foto} >
-            
           </PersonCard>
         ))}  
       </div>
