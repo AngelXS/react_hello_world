@@ -6,12 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+/*
 @media (prefers-reduced-motion: no-preference) {
   img {
     animation: App-logo-spin infinite 0.5s linear;
   }
-}
+}*/
 
 .App-header {
   background-color: #282c34;
@@ -52,4 +52,22 @@ body {
 .container {
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+.barra {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  justify-content: right;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  padding: 1.5rem;
+  margin: 0px;
+  height: 3rem;
+}
+.imagen img{
+  margin: 0;
+  height: 60px;
+  width: auto;
 }

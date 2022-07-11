@@ -28,10 +28,7 @@ class PersonCard extends React.Component{
  }
 
  export default PersonCard; */
-
  import React from "react";
-
-
  class PersonCard extends React.Component{
     constructor(props) {
         super(props);
@@ -39,7 +36,7 @@ class PersonCard extends React.Component{
         this.changeAge = this.changeAge.bind(this);
     }
     changeAge(){
-        this.setState(prevState=>({edad:prevState.edad+1}));
+       this.setState(prevState=>({edad:prevState.edad+1}));
     }
      render(){
         const { name, city, country, address, foto } = this.props;
@@ -51,7 +48,8 @@ class PersonCard extends React.Component{
                  <h3>{city}</h3>
                  <h3>{country}</h3>
                  <h3>{address}</h3>
-                 <button onClick={this.changeAge}>Aumentar</button>       
+                 <button onClick={this.changeAge}>Aumentar</button>
+                 <button onClick={this.props.cambiar}>Seleccionar</button>
                  {this.props.children}
                  <hr/>
              </div>
